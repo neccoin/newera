@@ -5,5 +5,5 @@ New era 是一个以太坊的升级应用
 
 
 <div align="center">
-<img src=https://a111a123.com:85/1/www.5igb.com_files/bing.gif />
+<img src=https://github.com/neccoin/resource/blob/main/img/logo01.png />
 </div>
