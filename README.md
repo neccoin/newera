@@ -1,7 +1,9 @@
 # newera
 New era 是一个以太坊的升级应用
 
-[English README](/README_EN.md) [项目主页](http://necoin.io)
+[项目主页](http://necoin.io)
+
+[English README](/README_EN.md) 
 
 
 <div align="center">
