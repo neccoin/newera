@@ -11,7 +11,8 @@ New Era is 100% compatible with Ethereum's public chain.
 Meanwhile, in order to accelerate the transactions on the chain.
 New Era designs a New Layer 2 trading solution to accelerate the transactions on the upper chain data of Ethereum.
 
-Welcome more people who are willing to improve the ecological quality of Ethereum to join us in this project that means a lot to Ethereum. 
+Welcome more people who are willing to improvethe ecological quality of Ethereum to join us 
+in this project that means a lot to Ethereum. 
 ```
 
 <br>
