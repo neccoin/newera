@@ -8,12 +8,14 @@
 <br>
 
 ###       &emsp;欢迎更多愿意提升以太坊生态质量的人加入我们，参与这个对以太坊来说意义重大的项目。
-
+<br>
+<br>
+[English README](/README_EN.md) 
 <br>
 <br>
 [项目主页](http://necoin.io)   
 
-[English README](/README_EN.md) 
+
 <br>
 <br>
 
