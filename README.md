@@ -11,7 +11,10 @@
 
 <br>
 <br>
-[项目主页](http://necoin.io)   &emsp; &emsp; &emsp; [English README](/README_EN.md) 
+[项目主页](http://necoin.io)   
+<br>
+<br>
+[English README](/README_EN.md) 
 
 <br>
 <br>
