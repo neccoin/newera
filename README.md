@@ -34,6 +34,7 @@
 
 <br>
 <br>
+
 ####  New era 技术特性
 
 <br>
@@ -46,6 +47,7 @@
 - 5 与以太坊 100% 兼容
 <br>
 <br>
+
 #### New era 开发授权
 
 - 除非特别说明，New era 的源码遵守 以太坊  LGPL-3.0 License 和  MIT License 协议
