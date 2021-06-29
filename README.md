@@ -33,6 +33,24 @@ New era 是一个为了解决以太坊在商业应用时遇到瓶颈的应用链
 <br>
 <br>
 
+#### New era 的链下验证示意图
+
+<br>
+<br>
+<br>
+
+<div align="center">
+<img src=https://github.com/neccoin/resource/blob/main/img/layer2.png />
+</div>
+
+<br>
+<br>
+
+```
+基层以太坊区块链的吞吐量是相同的，第二层解决方案都是通过链下操作而不是在以太坊
+区块链上运行的，同时仍然保证了足够的安全性和不可更改性。
+```
+
 ####  New era 技术特性
 
 
