@@ -39,7 +39,7 @@ New era 是一个为了解决以太坊在商业应用时遇到瓶颈的应用链
 <br>
 <br>
 
-<div align="center">
+<div align="right">
 <img src=https://github.com/neccoin/resource/blob/main/img/layer2.png />
 </div>
 
