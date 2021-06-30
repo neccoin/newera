@@ -106,6 +106,17 @@ At the end of the challenge period, the user can complete the transaction at L1,
 <br>
 <br>
 
+#### NFT casting
+
+<br>
+<br>
+
+```
+NFT is a unique, non-fungible asset cast on the chain. NFT is creating interesting use cases in the fields of digital art, collectibles, ticketing, games, digital ownership and more. Each NFT has its own unique attributes that are trackable and immutable. NFT artists can sell their works directly to collectors, and the authenticity and quantity of the cast works can be verified by anyone at any time. The platform can also be set to allow royalties to be collected in future resale events. Proof of ownership is easy to verify and can be applied to records, domain names and other assets.
+ 
+Just like other fungible assets (cryptocurrencies), token owners can fully control and manage their own assets without relying on a third party. The high gas fee on Ethereum makes it too expensive to mint and trade NFT on the mainnet. The platform solves this problem by casting, trading and storing NFTs. Once the value is determined and/or access to Ethereum is required, TokenBridge can be used to transfer the unique asset and all associated metadata to Ethereum. The system provides a fast and cheap way to create and manage NFTs in the entire blockchain ecosystem.
+```
+
 
 ####  New era 技术特性
 
