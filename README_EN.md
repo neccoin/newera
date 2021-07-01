@@ -117,6 +117,17 @@ NFT is creating interesting use cases in the fields of digital art, collectibles
  
 Just like other fungible assets (cryptocurrencies), token owners can fully control and manage their own assets without relying on a third party. The high gas fee on Ethereum makes it too expensive to mint and trade NFT on the mainnet. The platform solves this problem by casting, trading and storing NFTs. Once the value is determined and/or access to Ethereum is required, TokenBridge can be used to transfer the unique asset and all associated metadata to Ethereum. The system provides a fast and cheap way to create and manage NFTs in the entire blockchain ecosystem.
 ```
+<br>
+<br>
+
+#### NFT wallet
+
+<br>
+<br>
+
+```
+The development team is working to build an easy-to-use Plasma wallet mobile application integrated with WalletConnect to ensure the secure storage of keys, intuitive access to the functions provided by NEW ERA based on Ethereum Layer 2, based on the seamless link of DApps to the browser . Users can interact with DApps on browsers and more devices in the future, while still keeping their keys securely in their mobile wallets.
+```
 
 
 ####  New era 技术特性
