@@ -127,6 +127,22 @@ Just like other fungible assets (cryptocurrencies), token owners can fully contr
 
 ```
 The development team is working to build an easy-to-use Plasma wallet mobile application integrated with WalletConnect to ensure the secure storage of keys, intuitive access to the functions provided by NEW ERA based on Ethereum Layer 2, based on the seamless link of DApps to the browser . Users can interact with DApps on browsers and more devices in the future, while still keeping their keys securely in their mobile wallets.
+
+```
+<br>
+
+#### NFT Community currency  
+
+<br>
+<br>
+
+```
+Community Integration Currency (CIC) is the local currency and services used to pay for goods.  CIC is not a substitute for the local currency;  They are supplementary currencies used to support local trade.  
+CIC provides a medium for daily spending and trade while allowing individuals to save money in which citizens interact with large corporations (which may be volatile or scarce) and government agencies outside the immediate community.  
+CIC supports and empowers communities to create jobs, develop social programs, and support trade infrastructure by establishing decentralized local banking.  
+Blockchain technology supports CIC's platform for local currency exchange by providing Web-based transparency.  
+Local currency can be traded one way and another based on exchange rates - all users need is a phone and a custom wallet app.  Fast speed, strong stability.  
+
 ```
 
 
