@@ -154,16 +154,14 @@ Local currency can be traded one way and another based on exchange rates - all u
 <br>
 
 ```
-OpenNew Era is the fastest, lightest, and most secure Ethereum customer developed based on a fast, permission-free POS network End there are lightweight identity protocol and stability protocol. It uses the Rust programming language. It is licensed under GPLv3 and can To be used for all Ethereum requirements. 
-Specifically, a lightweight identity protocol is one that can hash public keys and cell phone numbers Values are matched, thus allowing cryptocurrency to be sent to any phone number, which removes many walls of cryptocurrency transactions Base. A simple smartphone can act as a node in the New Era network, which is fast with an ultra-light client
-Synchronously implemented。
+OpenNEW ERA is the fastest, lightest, and most secure Ethereum client developed based on a fast PoS network without permission. It has a lightweight identity protocol and a stability protocol. It uses the Rust programming language. It is licensed under GPLv3 and can be used for all Ethereum needs. Specifically, the lightweight identity protocol means that it can match the hash value of the public key and the mobile phone number, thereby allowing encrypted currency to be sent to any mobile phone number, which eliminates many barriers to encrypted currency transactions. A simple smart phone can act as a node in the NEW ERA network, which is achieved through fast synchronization of ultra-light clients.
 
 
 · Clean, modular code base, easy to customize
 · Advanced client based on CLI
 · Minimum memory and storage space
 · Use WARP Sync to synchronize in hours, not days
-· Modular for easy integration into your services or products.
+· Modular for easy integration into your services or products.  
 ```
 
 
