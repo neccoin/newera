@@ -130,6 +130,7 @@ The development team is working to build an easy-to-use Plasma wallet mobile app
 
 ```
 <br>
+<br>
 
 #### NFT Community currency  
 
@@ -143,6 +144,26 @@ CIC supports and empowers communities to create jobs, develop social programs, a
 Blockchain technology supports CIC's platform for local currency exchange by providing Web-based transparency.  
 Local currency can be traded one way and another based on exchange rates - all users need is a phone and a custom wallet app.  Fast speed, strong stability.  
 
+```
+<br>
+<br>
+
+#### OpenNew Era - Ethereum Light Client Based on POS Network 
+
+<br>
+<br>
+
+```
+OpenNew Era is the fastest, lightest, and most secure Ethereum customer developed based on a fast, permission-free POS network End there are lightweight identity protocol and stability protocol. It uses the Rust programming language. It is licensed under GPLv3 and can To be used for all Ethereum requirements. 
+Specifically, a lightweight identity protocol is one that can hash public keys and cell phone numbers Values are matched, thus allowing cryptocurrency to be sent to any phone number, which removes many walls of cryptocurrency transactions Base. A simple smartphone can act as a node in the New Era network, which is fast with an ultra-light client
+Synchronously implemented。
+
+
+· Clean, modular code base, easy to customize
+· Advanced client based on CLI
+· Minimum memory and storage space
+· Use WARP Sync to synchronize in hours, not days
+· Modular for easy integration into your services or products.
 ```
 
 
