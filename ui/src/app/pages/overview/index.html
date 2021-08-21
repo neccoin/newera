@@ -1,0 +1,502 @@
+<app-nav> </app-nav>
+<div class="container overview">
+  <div class="col-md-12  pt-5">
+    <h3 class="mb-2">Account Balance</h3>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-3">
+            <a [routerLink]="['/nft/list']">
+              <div class="card">
+                <div class="card-body">
+                  <h3 *ngIf="count">{{ nftBalance }}</h3>
+                  <p class="card-text">
+                    ERC-721: {{ nftName || 'Public Tokens' }}
+                    <span *ngIf="nftSymbol">({{ nftSymbol }})</span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-3">
+            <a [routerLink]="['/nft-commitment/list']">
+              <div class="card">
+                <div class="card-body">
+                  <h3 *ngIf="count">
+                    {{ count.nftCommitmentCount ? count.nftCommitmentCount : '0' }}
+                  </h3>
+                  <p class="card-text">{{ nftName }} Commitments</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-body">
+                <h3>{{ ftBalance }}</h3>
+                <p class="card-text">
+                  ERC-20: {{ ftName || '' }} <span *ngIf="ftSymbol">({{ ftSymbol }})</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <a [routerLink]="['/ft-commitment/list']">
+              <div class="card">
+                <div class="card-body">
+                  <h3 *ngIf="count">
+                    {{ count.ftCommitmentCount ? count.ftCommitmentCount : '0' }}
+                  </h3>
+                  <p class="card-text">{{ ftName }} Commitments</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h3 class="mb-2">Actions</h3>
+        <div class="row mb-3">
+          <div class="col-md-3">
+            <a class="btn btn-primary btn-list" [routerLink]="['/nft/mint']"
+              >Mint {{ nftName || 'Public Token' }}</a
+            >
+            <a class="btn btn-primary btn-list" [routerLink]="['/nft/transfer']"
+              >Transfer {{ nftName || 'Public Token' }}</a
+            >
+            <a class="btn btn-primary btn-list" [routerLink]="['/nft/burn']"
+              >Burn {{ nftName || 'Public Token' }}</a
+            >
+          </div>
+
+          <div class="col-md-3">
+            <a class="btn btn-primary btn-list" [routerLink]="['/nft-commitment/mint']"
+              >Mint {{ nftName }} Commitment</a
+            >
+            <a class="btn btn-primary btn-list" [routerLink]="['/nft-commitment/transfer']"
+              >Transfer {{ nftName }} Commitment</a
+            >
+            <a class="btn btn-primary btn-list" [routerLink]="['/nft-commitment/burn']"
+              >Burn {{ nftName }} Commitment</a
+            >
+          </div>
+
+          <div class="col-md-3">
+            <a class="btn btn-primary btn-list" [routerLink]="['/ft/mint']"
+              >Mint {{ ftName || '' }}</a
+            >
+            <a class="btn btn-primary btn-list" [routerLink]="['/ft/transfer']"
+              >Transfer {{ ftName || '' }}</a
+            >
+            <a class="btn btn-primary btn-list" [routerLink]="['/ft/burn']"
+              >Burn {{ ftName || '' }}</a
+            >
+          </div>
+
+          <div class="col-md-3">
+            <a class="btn btn-primary btn-list ft-commitment" [routerLink]="['/ft-commitment/mint']"
+              >Mint {{ ftName }} Commitment</a
+            >
+            <a
+              class="btn btn-primary btn-list ft-commitment"
+              [routerLink]="['/ft-commitment/transfer']"
+              >Transfer {{ ftName }} Commitment</a
+            >
+            <a
+              class="btn btn-primary btn-list ft-commitment"
+              [routerLink]="['/ft-commitment/batch-transfer']"
+              >Batch Transfer {{ ftName }} Commitment</a
+            >
+            <a class="btn btn-primary btn-list ft-commitment" [routerLink]="['/ft-commitment/burn']"
+              >Burn {{ ftName }} Commitment</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row   mb-3">
+      <div class="col-sm-12">
+        <h3 class="mb-2">Transactions History</h3>
+        <ngb-tabset activeId="{{ selectedTab }}">
+          <ngb-tab id="nft">
+            <ng-template ngbTabTitle>
+              <div (click)="getTransactions('nft')">
+                <strong>{{ nftName }}</strong>
+              </div>
+            </ng-template>
+            <ng-template ngbTabContent>
+              <table class="table  table-hover">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Token ID</th>
+                    <th>URI</th>
+                    <th>Date</th>
+                    <th>Send To</th>
+                    <th>Received from</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let transaction of nftTransactions">
+                    <td>{{ utilService.replaceUnderscores(transaction.transactionType) }}</td>
+                    <td [title]="transaction.tokenId">
+                      {{ transaction.tokenId.slice(0, 20) }}....
+                    </td>
+                    <td>{{ transaction.tokenUri }}</td>
+                    <td>{{ transaction.createdAt | date: 'dd/MM/yyyy hh:mm:ss a' }}</td>
+                    <td>
+                      {{ transaction.transactionType !== 'transfer_incoming' && transaction.receiver
+                      ? transaction.receiver.name : '' }}
+                    </td>
+                    <td>
+                      {{ transaction.transactionType === 'transfer_incoming' && transaction.sender ?
+                      transaction.sender.name : '' }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <ngb-pagination
+                *ngIf="isPagination"
+                class="d-flex justify-content-end zkp-pagination"
+                (pageChange)="pageChanged($event)"
+                [collectionSize]="totalCollection | async"
+                [pageSize]="pageSize"
+                [(page)]="pageNo"
+                aria-label="Default pagination"
+              ></ngb-pagination>
+            </ng-template>
+          </ngb-tab>
+
+          <ngb-tab id="nft-commitment">
+            <ng-template ngbTabTitle>
+              <div (click)="getTransactions('nft-commitment')">
+                <strong>{{ nftName }} Commitment</strong>
+              </div>
+            </ng-template>
+            <ng-template ngbTabContent>
+              <table class="table  table-hover">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Token ID</th>
+                    <th>URI</th>
+                    <th>Date</th>
+                    <th>Send To</th>
+                    <th>Received From</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <ng-container *ngFor="let transaction of nftCommitmentTransactions">
+                    <tr *ngIf="transaction.transactionType === 'mint'">
+                      <td>{{ utilService.replaceUnderscores(transaction.transactionType) }}</td>
+                      <td
+                        *ngIf="!transaction.isFailed"
+                        [title]="transaction.outputCommitments[0].tokenId"
+                      >
+                        {{ transaction.outputCommitments[0].tokenId.slice(0, 20) }}....
+                      </td>
+                      <td *ngIf="transaction.isFailed">
+                        <i class="fa fa-ban" aria-hidden="true"></i>
+                        <span class="tx-failed">TRANSACTION FAILED</span>
+                      </td>
+                      <td>{{ transaction.outputCommitments[0].tokenUri }}</td>
+                      <td>{{ transaction.createdAt | date: 'dd/MM/yyyy hh:mm:ss a' }}</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr *ngIf="transaction.transactionType === 'transfer_outgoing'">
+                      <td>{{ utilService.replaceUnderscores(transaction.transactionType) }}</td>
+                      <td
+                        *ngIf="!transaction.isFailed"
+                        [title]="transaction.outputCommitments[0].tokenId"
+                      >
+                        {{ transaction.outputCommitments[0].tokenId.slice(0, 20) }}....
+                      </td>
+                      <td *ngIf="transaction.isFailed">
+                        <i class="fa fa-ban" aria-hidden="true"></i>
+                        <span class="tx-failed">TRANSACTION FAILED</span>
+                      </td>
+                      <td>{{ transaction.outputCommitments[0].tokenUri }}</td>
+                      <td>{{ transaction.createdAt | date: 'dd/MM/yyyy hh:mm:ss a' }}</td>
+                      <td>{{ transaction.receiver.name }}</td>
+                      <td></td>
+                    </tr>
+                    <tr *ngIf="transaction.transactionType === 'transfer_incoming'">
+                      <td>{{ utilService.replaceUnderscores(transaction.transactionType) }}</td>
+                      <td [title]="transaction.outputCommitments[0].tokenId">
+                        {{ transaction.outputCommitments[0].tokenId.slice(0, 20) }}....
+                      </td>
+                      <td>{{ transaction.outputCommitments[0].tokenUri }}</td>
+                      <td>{{ transaction.createdAt | date: 'dd/MM/yyyy hh:mm:ss a' }}</td>
+                      <td></td>
+                      <td>{{ transaction.sender.name }}</td>
+                    </tr>
+                    <tr *ngIf="transaction.transactionType === 'burn'">
+                      <td>{{ utilService.replaceUnderscores(transaction.transactionType) }}</td>
+                      <td
+                        *ngIf="!transaction.isFailed"
+                        [title]="transaction.inputCommitments[0].tokenId"
+                      >
+                        {{ transaction.inputCommitments[0].tokenId.slice(0, 20) }}....
+                      </td>
+                      <td *ngIf="transaction.isFailed">
+                        <i class="fa fa-ban" aria-hidden="true"></i>
+                        <span class="tx-failed">TRANSACTION FAILED</span>
+                      </td>
+                      <td>{{ transaction.inputCommitments[0].tokenUri }}</td>
+                      <td>{{ transaction.createdAt | date: 'dd/MM/yyyy hh:mm:ss a' }}</td>
+                      <td>{{ transaction.receiver.name }}</td>
+                      <td></td>
+                    </tr>
+                  </ng-container>
+                </tbody>
+              </table>
+              <ngb-pagination
+                *ngIf="isPagination"
+                class="d-flex justify-content-end zkp-pagination"
+                (pageChange)="pageChanged($event)"
+                [collectionSize]="totalCollection | async"
+                [pageSize]="pageSize"
+                [(page)]="pageNo"
+                aria-label="Default pagination"
+              ></ngb-pagination>
+            </ng-template>
+          </ngb-tab>
+
+          <ngb-tab id="ft">
+            <ng-template ngbTabTitle>
+              <div (click)="getTransactions('ft')">
+                <strong>{{ ftName }}</strong>
+              </div>
+            </ng-template>
+            <ng-template ngbTabContent>
+              <table class="table  table-hover">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Send To</th>
+                    <th>Received From</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let transaction of ftTransactions">
+                    <td>{{ utilService.replaceUnderscores(transaction.transactionType) }}</td>
+                    <td>{{ ftSymbol + ' ' + transaction.value }}</td>
+                    <td>{{ transaction.createdAt | date: 'dd/MM/yyyy hh:mm:ss a' }}</td>
+                    <td *ngIf="transaction.transactionType === 'transfer_outgoing'">
+                      {{ transaction.receiver ? transaction.receiver.name : '' }}
+                    </td>
+                    <td *ngIf="transaction.transactionType !== 'transfer_outgoing'"></td>
+                    <td *ngIf="transaction.transactionType === 'transfer_incoming'">
+                      {{ transaction.sender ? transaction.sender.name : '' }}
+                    </td>
+                    <td *ngIf="transaction.transactionType !== 'transfer_incoming'"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <ngb-pagination
+                *ngIf="isPagination"
+                class="d-flex justify-content-end zkp-pagination"
+                (pageChange)="pageChanged($event)"
+                [collectionSize]="totalCollection | async"
+                [pageSize]="pageSize"
+                [(page)]="pageNo"
+                aria-label="Default pagination"
+              ></ngb-pagination>
+            </ng-template>
+          </ngb-tab>
+
+          <ngb-tab id="ft-commitment">
+            <ng-template ngbTabTitle>
+              <div (click)="getTransactions('ft-commitment')">
+                <strong>{{ ftName }} Commitment</strong>
+              </div>
+            </ng-template>
+            <ng-template ngbTabContent>
+              <table class="table  table-hover ft-commitment-table">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Commitment</th>
+                    <th>Date</th>
+                    <th>Send To</th>
+                    <th>Received From</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <ng-container *ngFor="let transaction of ftCommitmentTransactions; index as i">
+                    <tr *ngIf="transaction.transactionType === 'mint'">
+                      <td>{{ utilService.replaceUnderscores(transaction.transactionType) }}</td>
+                      <td>
+                        {{ ftSymbol + ' ' +
+                        utilService.convertToNumber(transaction.outputCommitments[0].value) }}
+                      </td>
+                      <td
+                        *ngIf="!transaction.isFailed"
+                        [title]="transaction.outputCommitments[0].commitment"
+                      >
+                        {{ transaction.outputCommitments[0].commitment }}
+                      </td>
+                      <td *ngIf="transaction.isFailed">
+                        <i class="fa fa-ban" aria-hidden="true"></i>
+                        <span class="tx-failed">TRANSACTION FAILED</span>
+                      </td>
+                      <td>{{ transaction.createdAt | date: 'dd/MM/yyyy hh:mm:ss a' }}</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr *ngIf="transaction.transactionType === 'change'">
+                      <td>{{ utilService.replaceUnderscores(transaction.transactionType) }}</td>
+                      <td>
+                        {{ ftSymbol + ' ' +
+                        utilService.convertToNumber(transaction.outputCommitments[0].value) }}
+                      </td>
+                      <td [title]="transaction.outputCommitments[0].commitment">
+                        {{ transaction.outputCommitments[0].commitment }}
+                      </td>
+                      <td>{{ transaction.createdAt | date: 'dd/MM/yyyy hh:mm:ss a' }}</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr *ngIf="transaction.transactionType === 'burn'">
+                      <td>{{ utilService.replaceUnderscores(transaction.transactionType) }}</td>
+                      <td>
+                        {{ ftSymbol + ' ' +
+                        utilService.convertToNumber(transaction.inputCommitments[0].value) }}
+                      </td>
+                      <td
+                        *ngIf="!transaction.isFailed"
+                        [title]="transaction.inputCommitments[0].commitment"
+                      >
+                        {{ transaction.inputCommitments[0].commitment }}
+                      </td>
+                      <td *ngIf="transaction.isFailed">
+                        <i class="fa fa-ban" aria-hidden="true"></i>
+                        <span class="tx-failed">TRANSACTION FAILED</span>
+                      </td>
+                      <td>{{ transaction.createdAt | date: 'dd/MM/yyyy hh:mm:ss a' }}</td>
+                      <td>{{transaction.receiver.name}}</td>
+                      <td></td>
+                    </tr>
+
+                    <tr *ngIf="transaction.transactionType === 'transfer_incoming'">
+                      <td>{{ utilService.replaceUnderscores(transaction.transactionType) }}</td>
+                      <td>
+                        {{ ftSymbol + ' ' +
+                        utilService.convertToNumber(transaction.outputCommitments[0].value) }}
+                      </td>
+                      <td [title]="transaction.outputCommitments[0].commitment">
+                        {{ transaction.outputCommitments[0].commitment }}
+                      </td>
+                      <td>{{ transaction.createdAt | date: 'dd/MM/yyyy hh:mm:ss a' }}</td>
+                      <td></td>
+                      <td>{{transaction.sender.name}}</td>
+                    </tr>
+
+                    <tr
+                      data-toggle="collapse"
+                      [attr.data-target]="'#collapse-' + i"
+                      [attr.aria-controls]="'collapse-' + i"
+                      [attr.aria-expanded]="transaction.isExpand"
+                      (click)="transaction.isExpand = !transaction.isExpand"
+                      *ngIf="transaction.transactionType === 'transfer_outgoing'"
+                    >
+                      <td>
+                        {{ utilService.replaceUnderscores(transaction.transactionType) }}
+                      </td>
+                      <td>
+                        {{ transaction.receiver ? (ftSymbol + ' ' +
+                        utilService.convertToNumber(transaction.outputCommitments[0].value)) :
+                        (ftSymbol + ' ' +
+                        utilService.sumCommitmentValues(transaction.outputCommitments).value) }}
+                      </td>
+                      <td title="Click to see list of commitments">
+                        <span *ngIf="transaction.isFailed">
+                          <i class="fa fa-ban" aria-hidden="true"></i>
+                          <span class="tx-failed">TRANSACTION FAILED</span>
+                        </span>
+                        <span class="active fas collapsed">View commitments</span>
+                      </td>
+                      <td>{{ transaction.createdAt | date: 'dd/MM/yyyy hh:mm:ss a' }}</td>
+                      <td>{{transaction.receiver && transaction.receiver.name}}</td>
+                      <td></td>
+                    </tr>
+                    <tr *ngIf="transaction.transactionType === 'transfer_outgoing'">
+                      <td class="collapse-row details-pane" colspan="6">
+                        <div [attr.id]="'collapse-' + i" [ngbCollapse]="!transaction.isExpand" class="collapse out">
+                          <table
+                            class="details-table table table-striped"
+                            *ngIf="transaction.inputCommitments.length > 1"
+                          >
+                            <tr>
+                              <th>Used Amount</th>
+                              <th>Used Commitment</th>
+                            </tr>
+                            <tr
+                              *ngFor="let used_commitments of transaction.inputCommitments; index as i"
+                            >
+                              <td>
+                                {{ ftSymbol +' '
+                                +utilService.convertToNumber(used_commitments.value) }}
+                              </td>
+                              <td>{{used_commitments.commitment}}</td>
+                            </tr>
+                          </table>
+
+                          <table
+                            class="details-table table table-striped"
+                            *ngIf="transaction.outputCommitments.length > 1"
+                          >
+                            <tr>
+                              <th>Transferred Amounts</th>
+                              <th>Transferred Commitments</th>
+                              <th>Receiver Names</th>
+                            </tr>
+                            <tr
+                              *ngFor="let commitments of transaction.outputCommitments; index as i"
+                            >
+                              <td>
+                                {{ ftSymbol +' ' +utilService.convertToNumber(commitments.value) }}
+                              </td>
+                              <td *ngIf="!transaction.isFailed">{{ commitments.commitment }}</td>
+                              <td *ngIf="transaction.isFailed">
+                                <i class="fa fa-ban" aria-hidden="true"></i>
+                                <span class="tx-failed">TRANSACTION FAILED</span>
+                              </td>
+                              <td *ngIf="!transaction.isFailed">{{ commitments.owner.name }}</td>
+                              <td *ngIf="transaction.isFailed"></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                  </ng-container>
+                </tbody>
+              </table>
+              <ngb-pagination
+                *ngIf="isPagination"
+                class="d-flex justify-content-end zkp-pagination"
+                (pageChange)="pageChanged($event)"
+                [collectionSize]="totalCollection | async"
+                [pageSize]="pageSize"
+                [(page)]="pageNo"
+                aria-label="Default pagination"
+              ></ngb-pagination>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+      </div>
+    </div>
+  </div>
+</div>

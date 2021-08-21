@@ -1,0 +1,62 @@
+<app-nav> </app-nav>
+
+<div class="container overview">
+  <div class="row">
+    <div class="col-sm-12">
+      <nav class="mt-4" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a [routerLink]="['/overview']">Overview</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">{{ ftName }} Commitment</li>
+        </ol>
+      </nav>
+      <div class="box">
+        <div class="box-header">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class="">{{ ftName }} Commitment</h3>
+            </div>
+            <div class="col-sm-6">
+              <a class="btn btn-primary btn-list pull-right" [routerLink]="['/ft-commitment/mint']"
+                >Mint {{ ftName }} Commitment</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="box-body">
+          <div class="col-sm-12 no-padding-right">
+            <div class="row">
+              <div
+                class="col-md-3 no-padding-left"
+                *ngFor="let transaction of transactions; let i = index"
+              >
+                <div
+                  *ngIf="transaction.commitment"
+                  class="token-card"
+                  [ngClass]="{ active: transaction.selected }"
+                >
+                  <p class="list-token header">
+                    {{ utilService.convertToNumber(transaction.value) }} Private {{ ftName }}
+                  </p>
+                  <p class="list-token">{{ transaction.commitment.slice(0, 30) }}...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ngb-pagination
+            *ngIf="transactions"
+            class="d-flex justify-content-end zkp-pagination"
+            (pageChange)="pageChanged($event)"
+            [collectionSize]="totalCollection"
+            [pageSize]="pageSize"
+            [(page)]="pageNo"
+            aria-label="Default pagination"
+          >
+          </ngb-pagination>
+          <div class="text-center" *ngIf="!transactions">No {{ ftName }} Commitment's Found</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
