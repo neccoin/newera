@@ -17,9 +17,11 @@ in this project that means a lot to Ethereum.
 
 <br>
 <br>
-[project](http://necoin.io)   
+[project]
+ (http://necoin.io)   
 
-[中文说明](/README.md) 
+[中文说明]
+ (/README.md) 
 <br>
 <br>
 

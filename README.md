@@ -1,7 +1,20 @@
-<br>
-<br>
 
-## What is the  New era？
+# <a name="TOC"></a> New Era Protocol
+
+##  [White Paper in English ](#EN)
+
+##  [White Paper in Chinese ](#CN)
+
+##  [White Paper in Japanese ](#JP)
+
+##  [White Paper in Russian ](#RU)
+
+---
+
+[Return to Table of Content](#TOC)
+
+
+## <a name="EN"></a>What is the  New Era？
 
 
 
@@ -17,13 +30,18 @@ in this project that means a lot to Ethereum.
 
 <br>
 <br>
-[project](http://necoin.io)   
+
+### Project Website
+
+[https://necoin.io](https://necoin.io)   
 
 
 <br>
+
+
 <br>
 
-#### New era architecture view
+#### New Era Architecture View
 
 <br>
 <br>
@@ -36,7 +54,7 @@ in this project that means a lot to Ethereum.
 <br>
 <br>
 
-#### New Era off-chain verification schematic
+#### New Era Off-chain Verification Schematic
 
 <br>
 <br>
@@ -56,7 +74,7 @@ The throughput of the underlying Ethereum blockchain is the same, and the second
 <br>
 <br>
 
-#### New Era's cross-chain asset bridge introduction
+#### New Era's Cross-chain Asset Bridge Introduction
 
 <br>
 <br>
@@ -65,6 +83,11 @@ __NEC uses the communication capability between L1 and L2 to transfer any form o
 
 <br>
 <br>
+
+
+
+
+
 
 ```
 
@@ -106,7 +129,7 @@ At the end of the challenge period, the user can complete the transaction at L1,
 <br>
 <br>
 
-#### NFT casting
+#### NFT Casting
 
 <br>
 <br>
@@ -120,19 +143,19 @@ Just like other fungible assets (cryptocurrencies), token owners can fully contr
 <br>
 <br>
 
-#### NFT wallet
+#### NFT Wallet
 
 <br>
 <br>
 
 ```
-The development team is working to build an easy-to-use Plasma wallet mobile application integrated with WalletConnect to ensure the secure storage of keys, intuitive access to the functions provided by NEW ERA based on Ethereum Layer 2, based on the seamless link of DApps to the browser . Users can interact with DApps on browsers and more devices in the future, while still keeping their keys securely in their mobile wallets.
+The development team is working to build an easy-to-use Plasma wallet mobile application integrated with WalletConnect to ensure the secure storage of keys, intuitive access to the functions provided by New Era based on Ethereum Layer 2, based on the seamless link of DApps to the browser . Users can interact with DApps on browsers and more devices in the future, while still keeping their keys securely in their mobile wallets.
 
 ```
 <br>
 <br>
 
-#### NFT Community currency  
+#### NFT Community Currency  
 
 <br>
 <br>
@@ -148,13 +171,13 @@ Local currency can be traded one way and another based on exchange rates - all u
 <br>
 <br>
 
-#### OpenNew Era - Ethereum Light Client Based on POS Network 
+#### Open New Era - Ethereum Light Client Based on POS Network 
 
 <br>
 <br>
 
 ```
-OpenNEW ERA is the fastest, lightest, and most secure Ethereum client developed based on a fast PoS network without permission. It has a lightweight identity protocol and a stability protocol. It uses the Rust programming language. It is licensed under GPLv3 and can be used for all Ethereum needs. Specifically, the lightweight identity protocol means that it can match the hash value of the public key and the mobile phone number, thereby allowing encrypted currency to be sent to any mobile phone number, which eliminates many barriers to encrypted currency transactions. A simple smart phone can act as a node in the NEW ERA network, which is achieved through fast synchronization of ultra-light clients.
+OpenNew Era is the fastest, lightest, and most secure Ethereum client developed based on a fast PoS network without permission. It has a lightweight identity protocol and a stability protocol. It uses the Rust programming language. It is licensed under GPLv3 and can be used for all Ethereum needs. Specifically, the lightweight identity protocol means that it can match the hash value of the public key and the mobile phone number, thereby allowing encrypted currency to be sent to any mobile phone number, which eliminates many barriers to encrypted currency transactions. A simple smart phone can act as a node in the New Era network, which is achieved through fast synchronization of ultra-light clients.
 
 
 · Clean, modular code base, easy to customize
@@ -166,7 +189,7 @@ OpenNEW ERA is the fastest, lightest, and most secure Ethereum client developed 
 <br>
 <br>
 
-#### Network security hypothesis 
+#### Network Security Hypothesis 
 
 <br>
 <br>
@@ -176,7 +199,8 @@ This protocol assumes that the network is an asynchronous system with final deli
 ```
 
 
-####  New era 技术特性
+
+####  New Era Technology Advantages
 
 
 ```
@@ -189,31 +213,38 @@ This protocol assumes that the network is an asynchronous system with final deli
 <br>
 <br>
 
-#### New era 开发授权
+#### New Era Rights
 ```
 - the source code complies with the Ethereum LGPL-3.0 License and MIT License agreement. 
 ```
 
-## 什么是 New era？
+---
+
+[回到目录](#TOC)
+
+## <a name="CN"></a>什么是 New Era？
 
 
 
 ```
-New era 是一个为了解决以太坊在商业应用时遇到瓶颈的应用链，New era 100%和以太坊的公链保持兼容。
-同时为了能加速链上的成交，New era 全新设计了一个新的 Layer-2 的交易解决方案，将以太坊的上链数据进行交易加速。
+New Era 是一个为了解决以太坊在商业应用时遇到瓶颈的应用链，New Era 100%和以太坊的公链保持兼容。
+同时为了能加速链上的成交，New Era 全新设计了一个新的 Layer-2 的交易解决方案，将以太坊的上链数据进行交易加速。
 
 欢迎更多愿意提升以太坊生态质量的人加入我们，参与这个对以太坊来说意义重大的项目。
 ```
 
 <br>
 <br>
-[项目主页](http://necoin.io)   
 
-[English README](/README_EN.md) 
+### 官方主页
+
+[https://necoin.io](https://necoin.io)   
+
+ 
 <br>
 <br>
 
-#### New era 架构视图
+#### New Era 架构视图
 
 <br>
 <br>
@@ -226,7 +257,7 @@ New era 是一个为了解决以太坊在商业应用时遇到瓶颈的应用链
 <br>
 <br>
 
-#### New era 的链下验证示意图
+#### New Era 的链下验证示意图
 
 <br>
 <br>
@@ -246,7 +277,7 @@ New era 是一个为了解决以太坊在商业应用时遇到瓶颈的应用链
 <br>
 <br>
 
-#### New era 的跨链资产桥介绍
+#### New Era 的跨链资产桥介绍
 
 <br>
 <br>
@@ -297,7 +328,7 @@ L2 链将在一定时间内收集到的交易打包，生成默克尔树，并�
 <br>
 <br>
 
-#### New era NFT铸造
+#### New Era NFT铸造
 
 <br>
 <br>
@@ -315,19 +346,19 @@ NFT艺术家可以将其作品直接出售给收藏家，铸造的作品的真�
 <br>
 <br>
 
-#### New era NEC钱包
+#### New Era NEC钱包
 
 <br>
 <br>
 
 ```
-开发团队正在致力于构建一个易于使用的 Plasma 钱包移动应用程序与WalletConnect集成，以确保密钥的安全存储、对 NEW ERA基于以太坊Layer2提供的功能的直观访问
+开发团队正在致力于构建一个易于使用的 Plasma 钱包移动应用程序与WalletConnect集成，以确保密钥的安全存储、对 New Era基于以太坊Layer2提供的功能的直观访问
 基于DApps 到浏览器的无缝链接。用户可以在浏览器和未来更多设备上与 DApp 交互，同时仍将其密钥安全地保存在移动钱包中。
 ```
 <br>
 <br>
 
-#### New era 社区货币
+#### New Era 社区货币
 
 <br>
 <br>
@@ -342,13 +373,13 @@ CIC支持并赋权社区创造工作，发展社会计划，并通过建立去�
 <br>
 <br>
 
-#### 基于POS网络的以太坊轻客户端—OpenNEW ERA
+#### 基于POS网络的以太坊轻客户端—OpenNew Era
 
 <br>
 <br>
 
 ```
-OpenNEW ERA是基于无需许可的快速PoS网络而开发的最快、最轻、最安全的以太坊客户端，有轻量级身份协议和稳定性协议。它用Rust 编程语言。它在 GPLv3 下获得许可，并且可以用于所有以太坊需求。具体而言，轻量级身份协议是指它可以将公钥和手机号码的哈希值进行匹配，从而允许向任何手机号码发送加密货币，这就消除了加密货币交易的很多壁垒。一部简单的智能手机就可以充当NEW ERA网络中的节点，这是通过超轻客户端的快速同步实现的。
+OpenNew Era是基于无需许可的快速PoS网络而开发的最快、最轻、最安全的以太坊客户端，有轻量级身份协议和稳定性协议。它用Rust 编程语言。它在 GPLv3 下获得许可，并且可以用于所有以太坊需求。具体而言，轻量级身份协议是指它可以将公钥和手机号码的哈希值进行匹配，从而允许向任何手机号码发送加密货币，这就消除了加密货币交易的很多壁垒。一部简单的智能手机就可以充当New Era网络中的节点，这是通过超轻客户端的快速同步实现的。
 
 ·干净、模块化的代码库，易于定制
 ·基于 CLI 的高级客户端
@@ -367,7 +398,7 @@ OpenNEW ERA是基于无需许可的快速PoS网络而开发的最快、最轻、
 ```
 此协议假设网络是一个有着最终传递保证的异步系统，意味着它假设所有的虚拟子节点都由一个可靠的通信链接彼此连接着，该链接可能会非常缓慢，但最终还是会把信息传递出去。此异步模型与比特币及以太坊区块链相似，反映了现代网络的状态⸺暂时的网络分歧是正常的，但最终都会迎刃而解。最终的传递保证在实践中实现的方式为：在信息遭受到指数式退回的情况下，发送信息的虚拟子节点会进行多次尝试，向接收虚拟子节点传递信息，直至该传递成功为止。
 ```
-####  New era 技术特性
+####  New Era 技术特性
 
 
 ```
@@ -380,8 +411,8 @@ OpenNEW ERA是基于无需许可的快速PoS网络而开发的最快、最轻、
 <br>
 <br>
 
-#### New era 开发授权
+#### New Era 开发授权
 ```
-- 除非特别说明，New era 的源码遵守 以太坊  LGPL-3.0 License 和  MIT License 协议
+- 除非特别说明，New Era 的源码遵守 以太坊  LGPL-3.0 License 和  MIT License 协议
 ```
 
