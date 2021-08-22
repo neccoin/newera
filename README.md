@@ -30,9 +30,10 @@ in this project that means a lot to Ethereum.
 
 <br>
 <br>
+
 ### Project Website
 
-[Project](https://necoin.io)   
+[https://necoin.io](https://necoin.io)   
 
 
 <br>
@@ -234,9 +235,12 @@ New Era 是一个为了解决以太坊在商业应用时遇到瓶颈的应用链
 
 <br>
 <br>
-[项目主页](http://necoin.io)   
 
-[English README](/README_EN.md) 
+### 官方主页
+
+[https://necoin.io](https://necoin.io)   
+
+ 
 <br>
 <br>
 
