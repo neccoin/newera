@@ -32,7 +32,7 @@ in this project that means a lot to Ethereum.
 <br>
 ### Project Website
 
-[Project](#https://necoin.io)   
+[Project](https://necoin.io)   
 
 
 <br>
