@@ -1,6 +1,9 @@
 <br>
 <br>
 
+
+### <a name="head1234"></a>A Heading in this SO entry!
+
 ## What is the  New era？
 
 
@@ -21,6 +24,8 @@ in this project that means a lot to Ethereum.
 
 
 <br>
+
+
 <br>
 
 #### New era architecture view
@@ -65,6 +70,11 @@ __NEC uses the communication capability between L1 and L2 to transfer any form o
 
 <br>
 <br>
+
+
+[This is the link text](#head1234)
+
+
 
 ```
 
@@ -175,6 +185,7 @@ OpenNEW ERA is the fastest, lightest, and most secure Ethereum client developed 
 This protocol assumes that the network is an asynchronous system with final delivery guarantees, which means that it assumes that all virtual child nodes are connected to each other by a reliable communication link. The link may be very slow, but it will eventually transmit information. This asynchronous model is similar to the Bitcoin and Ethereum blockchains and reflects the state of the modern network. Temporary network divergence is normal, but will eventually be resolved. The final delivery guarantee is realized in practice as follows: when the information suffers exponential return, the virtual child node sending the information will make multiple attempts to deliver the information to the receiving virtual child node until the delivery is successful.
 ```
 
+<a name="ChineseVersionHere"></a>
 
 ####  New era 技术特性
 
