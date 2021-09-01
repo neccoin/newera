@@ -212,6 +212,16 @@ This protocol assumes that the network is an asynchronous system with final deli
 ```
 <br>
 <br>
+####  Byzantine fault tolerance
+
+
+```
+Byzantine Fault Tolerance (BFT) is a security standard for distributed systems; the BFT system ensures that when there are less than 1/3 malicious nodes, nodes in the network can always reach the same consensus. Nodes deemed "malicious" in the network may exhibit a variety of behaviors, including but not limited to false reports, collusion, and refusal to participate.
+ 
+Among the multiple implementations of BFT, Asynchronous Byzantine Fault Tolerance (ABFT) is the most powerful. This is because they can deal with the possibility that information between honest participants is delayed or cannot be sent to the intended recipient-these are not uncommon in an Internet-like environment
+```
+<br>
+<br>
 
 #### New Era Rights
 ```
@@ -407,6 +417,14 @@ OpenNew Era是基于无需许可的快速PoS网络而开发的最快、最轻、
 - 3 多链互联
 - 4 交易 TPS 是以太坊的10 倍
 - 5 与以太坊 100% 兼容
+```
+####  拜占庭容错
+
+
+```
+拜占庭容错（BFT）是分布式系统的安全标准；BFT 系统确保了在少于 1/3 恶意节点的情况下，网络中的节点总能达成相同的共识。网络中被视为“恶意的”节点可能表现出多种行为，包括但不限于谎报、勾结与拒绝参与。
+ 
+在 BFT 的多种实现方式中，异步拜占庭容错（ABFT）最为强大。这是因为它们可应对诚实参与者之间的信息出现延迟或无法发送至预定接受者的可能性⸺这些在类似互联网环境下并不罕见。
 ```
 <br>
 <br>
